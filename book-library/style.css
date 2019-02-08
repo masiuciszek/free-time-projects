@@ -1,0 +1,26 @@
+body{
+    color: #fff;
+    background: rgba(5, 5, 5, 0.836);
+}
+
+.success, .error {
+    color: white;
+    padding: 5px;
+    margin: 5px 0 15px 0;
+  }
+
+  .success {
+    background: rgba(33, 194, 33, 0.897);
+  }
+
+  .error {
+    background: rgba(228, 84, 84, 0.808);
+  }
+
+  #submit-btn {
+      background: #ffd900bd;
+  }
+
+  tr{
+      color: #fff;
+  }
