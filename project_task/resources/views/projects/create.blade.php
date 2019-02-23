@@ -11,16 +11,26 @@
               <legend>Create</legend>
               </div>
               <div class="form-group">
-               <input type="text" name="title" class="form-control" placeholder="title">
+                  <input type="text" class="form-control {{$errors->has('title') ? 'alert-danger' : ''}} " name="title" id="title" placeholder="title" value="{{old('title')}}">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="name" placeholder="name">
+              <input type="text" class="form-control {{$errors->has('name') ? 'alert-danger' : ''}}" name="name" placeholder="name" value="{{old('name')}}" >
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="description" id="" rows="3"></textarea>
+                <textarea class="form-control" name="description" id="" rows="3"> {{$errors->has('description') ? 'alert-danger' : ''}} {{old('description')}} </textarea>
               </div>
 
               <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+
+              @if ($errors->any())
+              <div class="alert alert-dismissible alert-danger">
+                <ul>
+                  @foreach ($errors->all() as $error)
+                  <li> {{$error}} </li>
+                  @endforeach
+                </ul>
+              </div>
+              @endif
           </form>
 </div>
 

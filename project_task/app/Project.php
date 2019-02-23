@@ -13,4 +13,8 @@ class Project extends Model
     // the oposite to fillable is guarded
     protected $guarded = [];
 
+    public function tasks()
+    {
+        return $this->hasMany(Task::class);
+    }
 }
