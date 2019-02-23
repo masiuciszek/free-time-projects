@@ -23,8 +23,13 @@
                   <div class="form-group">
                     <textarea class="form-control" name="description" id="" rows="3"> {{$project->description }} </textarea>
                   </div>
-
-                  <button type="submit" name="update" class="btn btn-primary">Update Project</button>
+                  <button type="submit" name="update" class="btn btn-info">Update Project</button>
               </form>
+
+            <form action="/projects/{{$project->id}}" method="post">
+                @method('DELETE')
+                @csrf
+                <button type="submit" name="delete" class="btn btn-danger">Delete</button>
+            </form>
     </div>
 @endsection

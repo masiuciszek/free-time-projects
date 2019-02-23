@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title> @yield('title', 'projects') </title>
-        <link rel="stylesheet" href="https://bootswatch.com/4/spacelab/bootstrap.min.css">
+        <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
             @include('layout.nav')

@@ -1,0 +1,24 @@
+
+
+
+ul{
+    list-style: none;
+}
+
+.projects-list{
+    display: flex;
+}
+
+
+.projects-list li a{
+    padding: .3rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.projects-list li a:hover{
+    transition: all .6s;
+    color: rgb(52, 149, 209);
+    transform: rotate(30deg);
+}

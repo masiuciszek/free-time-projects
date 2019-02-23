@@ -6,5 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    //
+    // protected $fillable = [
+    //     'title' , 'name', 'description'
+    // ];
+
+    // the oposite to fillable is guarded
+    protected $guarded = [];
+
 }
