@@ -37,4 +37,16 @@
         </div>
     {{-- @endif --}}
 
+    {{-- add a new task --}}
+    <form action="/projects/{{ $project->id }}/tasks" method="POST">
+        @csrf
+        <div class="form-group my-5">
+            <input type="text" name="description" class="form-control" placeholder="new task">
+        </div>
+
+        <div class="form-group mt-1">
+            <button type="submit" name="submit" class="btn btn-info">Submit</button>
+        </div>
+    </form>
+
 @endsection
