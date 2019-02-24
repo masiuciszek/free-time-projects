@@ -41,11 +41,12 @@
     <form action="/projects/{{ $project->id }}/tasks" method="POST">
         @csrf
         <div class="form-group my-5">
-            <input type="text" name="description" class="form-control" placeholder="new task">
+            <input type="text" name="description" class="form-control" placeholder="new task" required>
         </div>
 
+        @include('projects.error')
         <div class="form-group mt-1">
-            <button type="submit" name="submit" class="btn btn-info">Submit</button>
+            <button type="submit" name="submit" class="btn btn-info">Add Task</button>
         </div>
     </form>
 
