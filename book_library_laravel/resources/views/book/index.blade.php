@@ -13,9 +13,13 @@
                         <img class="card-img-top" src="{{$book->image}} " alt="{{$book->title}}">
                         <div class="card-body">
                           <h5 class="card-title"> {{$book->title}} </h5>
-                          <p class="card-text"> {{$book->author}} </p>
+                          <p class="card-text"> {{$book->authors}} </p>
                                 @if ($book->genre != null)
                                 <p class="card-text"> {{$book->genre->name}} </p>
+                                @endif
+
+                                @if ($book->$publisher)
+                                    <p>$book->publisher->name</p>
                                 @endif
 
                           <a href="{{action('BookController@edit',$book->id)}} " class="btn btn-primary">Edit</a>

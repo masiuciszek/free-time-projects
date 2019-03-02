@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Book;
 use App\Genre;
+use App\Publisher;
 
 class BookController extends Controller
 {
@@ -16,8 +17,9 @@ class BookController extends Controller
     public function index()
     {
         $genre = Genre::all();
+        $publisher = Publisher::all();
         $books = Book::orderBy('id', 'desc')->take(100)->get();
-        return view('book.index', compact('books','genre'));
+        return view('book.index', compact('books','genre','publisher'));
     }
 
     /**
@@ -63,9 +65,10 @@ class BookController extends Controller
      */
     public function edit($id)
     {
+        $publishers = Publisher::all();
         $genres = Genre::all();
         $book = Book::findOrFail($id);
-        return view('book.edit', compact('book', 'genres'));
+        return view('book.edit', compact(['book', 'genres', 'publishers']));
     }
 
     /**
@@ -77,7 +80,9 @@ class BookController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $book = Book::update($request->all());
+        $book = Book::findOrFail($id);
+        $book = $book->update($request->all());
+        // $book = $book->update($request(['title','authors','image','genres', 'publisher_id']));
 
         return redirect('/books');
     }
