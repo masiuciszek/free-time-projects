@@ -29,7 +29,9 @@ class BookController extends Controller
      */
     public function create()
     {
-        return view('book.create');
+        $genres = Genre::all();
+        $publishers = Publisher::all();
+        return view('book.create', compact(['genres', 'publishers']));
     }
 
     /**
@@ -40,8 +42,16 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        $books = Book::create($request->all());
+        $attr = $request->validate([
+            'title' => ['required', 'min:2', 'max:20'],
+            'authors' => ['required', 'min:2', 'max:40'],
+            'image' => ['required', 'min:2', 'max:175'],
+            'genre_id' => ['required', 'integer'],
+            'publisher_id' => ['required', 'integer'],
+        ]);
 
+        // $books = Book::create($request->all());
+        $books = Book::create($attr);
         return redirect('/books');
     }
 
