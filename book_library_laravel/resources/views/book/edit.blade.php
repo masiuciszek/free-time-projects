@@ -1,5 +1,6 @@
 @extends('layout.app')
 
+@include('layout.nav')
 @section('title', 'edit')
 
 @section('content')

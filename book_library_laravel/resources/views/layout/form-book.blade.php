@@ -1,3 +1,13 @@
+<?php
+$images = [
+    'image1' => 'https://img-cloud.megaknihy.cz/271489-large/566d9afcf23352f711def645046a5366/harry-potter-a-kamen-mudrcu.jpg',
+    'image2' => 'https://img-cloud.megaknihy.cz/271489-large/566d9afcf23352f711def645046a5366/harry-potter-a-kamen-mudrcu.jpg',
+    'image3' => 'https://img-cloud.megaknihy.cz/271489-large/566d9afcf23352f711def645046a5366/harry-potter-a-kamen-mudrcu.jpg',
+    'image4' => 'https://img-cloud.megaknihy.cz/271489-large/566d9afcf23352f711def645046a5366/harry-potter-a-kamen-mudrcu.jpg',
+];
+
+?>
+
 <div class="container">
   <form method="post" action="{{url('/books')}}">
       @csrf
@@ -28,10 +38,20 @@
           </select>
       </div>
 
-      <div class="form-group">
+      {{-- <div class="form-group">
         <label>Image</label>
         <input type="text" name="image" class="form-control {{$errors->any('image') ? 'alert-danger' : null}}" value="{{old('image') }}">
+      </div> --}}
+
+      <div class="form-group">
+        <label>Image</label>
+          <select name="image" id="image" class="form-control">
+              @foreach ($images as $i => $image)
+                  <option value="{{$image}}">{{$image}}</option>
+              @endforeach
+          </select>
       </div>
+
       <button type="submit" class="btn btn-primary">Submit</button>
       <a href="/" class="btn btn-warning">Home</a>
       @include('layouts.errors')
