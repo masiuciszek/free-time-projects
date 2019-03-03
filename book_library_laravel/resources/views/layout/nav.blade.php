@@ -12,6 +12,16 @@
         <li class="nav-item ">
           <a class="nav-link" href="{{action('BookController@create')}}">create</a>
         </li>
+
+        @if (!Auth::id())
+        <li class="nav-item register-link">
+          <a class="nav-link" href="{{ route('register') }}">Register</a>
+        </li>
+        <li class="nav-item login-link">
+          <a class="nav-link" href="{{ route('login') }}">Login</a>
+        </li>
+        @endif
+
       </ul>
   </nav>
 

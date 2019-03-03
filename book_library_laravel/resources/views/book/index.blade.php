@@ -5,7 +5,8 @@
 
 @section('content')
     <div class="container">
-        <h1 class="display-1">Books</h1>
+        <h1 class="display-1">Welcome {{$auth->name}}</h1>
+        <h3 class="display-3">Library</h3>
         <div class="books row">
             @foreach ($books as $book)
                 <div class="col-md-3">

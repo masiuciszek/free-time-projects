@@ -34,9 +34,12 @@
         <a href="/" class="btn btn-warning">Home</a>
       </form>
 
+
+      @if ($auth->admin)
       <form action="/books/{{$book->id}} " method="post">
         @csrf
         @method('DELETE')
         <button type="submit" class="btn btn-danger">Delete</button>
       </form>
+      @endif
   </div>

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Book;
 use App\Genre;
@@ -9,6 +9,11 @@ use App\Publisher;
 
 class BookController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -16,10 +21,11 @@ class BookController extends Controller
      */
     public function index()
     {
+        $auth = Auth::user();
         $genre = Genre::all();
         $publisher = Publisher::all();
         $books = Book::orderBy('id', 'desc')->take(100)->get();
-        return view('book.index', compact('books','genre','publisher'));
+        return view('book.index', compact('books','genre','publisher','auth'));
     }
 
     /**
@@ -75,10 +81,11 @@ class BookController extends Controller
      */
     public function edit($id)
     {
+        $auth = Auth::user();
         $publishers = Publisher::all();
         $genres = Genre::all();
         $book = Book::findOrFail($id);
-        return view('book.edit', compact(['book', 'genres', 'publishers']));
+        return view('book.edit', compact(['book', 'genres', 'publishers', 'auth']));
     }
 
     /**
