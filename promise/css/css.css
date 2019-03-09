@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: rgba(32, 32, 32, 0.75);
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+.wrapper{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+.users{
+    height: 100%;
+    width: 70%;
+    margin: 0 auto;
+    padding: 3rem;
+}
+.user-area{
+    padding: 1rem;
+}
+
+.container{
+
+}
+
+#btn{
+background: none;
+border: 3px solid #fff;
+border-radius: 4rem;
+padding: .5rem;
+font-size: 1.2rem;
+color: #fff;
+font-weight: 800;
+}
+
+.title{
+font-size: 3.7rem;
+}
+
+#output{
+    padding: 1rem;
+
+}

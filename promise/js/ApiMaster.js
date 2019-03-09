@@ -1,39 +1,46 @@
-class Chuck {
-    constructor(){
-
+class ApiMaster {
+    constructor(title,btn,api){
+        this.title = title;
+        this.btn = btn;
+        this.api = api;
     }
 
-    getJokes(area){
-        fetch(`http://api.icndb.com/jokes/random`)
+    getApi(api,area){
+        fetch(api)
         .then(res => res.json())
         .then(data => {
             console.log(data.value.joke);
             area.innerHTML = data.value.joke;
+        }).catch(err=>{
+            console.error(err);
         });
     }
+
 
     render(){
         this.element = document.createElement('div');
         this.element.className = 'wrapper';
         this.element.innerHTML = `
-        <div class="chuck">
-            <button id="chuck-btn">Get random joke</button>
-            <h3 class="chuck-title"></h3>
-            <p id="jokes"></p>
+        <div class="container">
+            <button id="btn">${this.btn}</button>
+            <h3 class="title">${this.title}</h3>
+            <p id="output"></p>
         </div>
         `;
-        const btn = this.element.querySelector('#chuck-btn');
+        const btn = this.element.querySelector('#btn');
         btn.addEventListener('click', () => {
-            this.getJokes(this.element.querySelector('#jokes'));
-        })
-
-
+            this.getApi(this.api,this.element.querySelector('#output'));
+        });
         return this.element;
     }
+
+
+
     mount(parent){
         parent.appendChild(this.render());
         this.update();
     }
+
 
     update(){
 
