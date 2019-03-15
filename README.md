@@ -7,6 +7,19 @@ own projects
 Some of my projects that I work on when I have som extra spare time.
 Right now using , Javascript and PHP.
 
+#projects
+
+Blog application with vanilla php
+
+book library vanilla Javascript , oop
+
+book library with laravel and using mysql as database
+
+clock application with vannila Javascript
+
+dice roller , vanilla php
+
+
 ## Installation
 
 Use the package manager [npm](https://www.npmjs.com/) [composer](https://getcomposer.org/) [yarn](https://yarnpkg.com/lang/en/)
