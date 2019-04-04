@@ -1,0 +1,235 @@
+
+
+body{
+	background-color: #fff;
+	font-style: normal;
+	font-size: 18px;
+	font-family: 'Oswald', sans-serif;
+	/* font-family: 'Josefin Sans', sans-serif; */
+
+
+	/* font osvald
+	josephine sans */
+}
+ 
+hr {
+	width: 150px;
+	height: 2px;
+	background-color: #D3981D;
+	
+}
+
+
+nav a {
+	color: white;
+}
+
+.navbar-toggler {
+	color: #fff;
+}
+
+
+.hero {
+	background-image: url(images/hero-image.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	background-attachment: fixed;
+	height: 100vh;
+	position: relative;
+	max-width: 100%;
+}
+
+.hero hr {
+	border-top: 2px solid #D3981D;
+	width: 150px;
+}
+
+.padding-logo-xl {
+	padding-top: 170px;
+	padding-bottom: 50px;
+}
+
+.padding-h1 {
+	padding: 20px 0 100px 0;
+	font-size: 31px;
+	color: #fff;
+}
+
+
+.arrow-icon {
+	color: #fff;
+	font-size: 35px;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	 transition: all 0.5s ease;
+}
+
+.arrow-icon:hover{
+	color: #D3981D;
+	bottom: 10px;
+	transition: all 0.5s ease;
+}
+
+/* .arrow-icon{
+	color: #d3981d;
+} */
+
+/* .arrow-icon i {
+	color: red;
+} */
+
+a:hover{
+	color: inherit;
+}
+
+
+/* --------------------bar section -----------------*/
+#bar-section {
+
+	font-family: 'Josefin Sans', sans-serif;
+	line-height: 36px;
+
+}
+#thebar {
+
+	font-family: 'Oswald', sans-serif;
+
+}
+
+
+
+
+
+
+/* --------------------/bar section -----------------*/
+
+
+
+
+
+
+
+
+
+
+/* --------Beauty section ---------*/
+
+.beauty-section {
+background-image: url(images/quote-image.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+padding: 130px 0 114px;
+}
+
+.beauty-section p{
+font-family: 'Josefin Sans', sans-serif;
+font-size: 25px;
+font-style: oblique;
+}
+
+
+#beauty-p-1 {
+	font-size: 40px;
+
+}
+
+/* --------////Beauty section ---------*/
+
+/* --------Brewers section ---------*/
+
+#the-brewers {
+background-image: url(images/brewers.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.small-arrow {
+	color: rgb(192, 160, 57);
+	font-size: 25px;
+}
+
+.small-arrow:hover{
+	color: rgb(106, 98, 95);
+	text-decoration: none;
+}
+/* --------///Brewers section ---------*/
+
+
+/* footer area */
+
+#contact-us {
+	background-color: #373737;
+	color: white;
+}
+
+
+#contact-us a{
+	color: #fff;
+	text-decoration: none;
+}
+
+#contact-us i{
+	rotate: -90deg;
+}
+
+.mail{
+	padding-left:30px;
+}
+
+iframe{
+	display: block;
+}
+
+
+
+
+/* //footer area */
+
+
+
+/* ------------------------media queries -------------------------*/
+
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .hero {
+    height: auto;
+  }
+}
+
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  
+	
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+ 
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+ 
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    
+}
+ 
+ 
+ 
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+ 
+/* Set width to make card deck cards 100% width */
+@media (max-width: 950px) { 
+ 
+}
+ 
+
