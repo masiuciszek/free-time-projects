@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
+:root {
+    --redColor: rgba(239, 53, 53, 0.9);
+}
+
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    background: #FFB6C1
+}
+
+.header-h2{
+   color: var(--redColor);
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+#content p {
+    color: #fefefe;
+    font-size: 1.125rem;
+    line-height: 2;
+}
+
+.content{
+    /* margin-bottom: 100px; */
+}
+
+#mainnav .navbar-brand{
+
+    color: var(--redColor);
+}
+
+#mainnav{
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+#mainnav .nav-link{
+    color: #fff;
+}
+
+#mainnav .nav-link:hover{
+    color: var(--redColor);
+}
+
+#mainnav .navbar-brand {
+    color: var(--redColor);
+    font-size: 1.5rem;
+}
+
+#headingGroup span {
+    color: var(--redColor);
+}
+#headingGroup h1 {
+  font-size: 3.5rem;
+  font-weight: 100;
+}
+
+#lollypop{
+    width: 70px;
+    height: 70px;
+}
+.navbar.scrolled{
+    background-color: rgb(255, 140, 171);
+}
+
+.navbar-toggler{
+    color: #001;
+}
+
+/* Media quries */
+
+@media (max-width: 1200px){
+    #headingGroup h1 {
+        font-size: 2.5rem;
+        font-weight: 100;
+      } 
+}
