@@ -1,3 +1,5 @@
+
+
 // increment
 export function increment(index) {
   return {
@@ -26,3 +28,4 @@ export function removeComment(postId, index){
     index
   }
 }
+
