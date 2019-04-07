@@ -1,27 +1,30 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { selectSong } from '../actions';
 
 class SongsList extends Component {
-  // eslint-disable-next-line arrow-body-style
-  renderList = () => {
-    return this.props.songs.map(song => (
+  renderList = () =>
+    this.props.songs.map(song => (
       <div className="item" key={song.title}>
         <div className="right floated content">
-          <button className="ui button primary">select</button>
+          <button
+            className="ui button primary"
+            onClick={() => this.props.selectSong(song)}
+          >
+            {song.title}
+          </button>
         </div>
-        <div className="content"> {song.title} </div>
+        <div className="content"> {/* <p>{song.title} </p>{' '} */}</div>
       </div>
     ));
-  };
 
   render() {
     // describing the mapstatetoprops func
     // this.props = { songs: state.songs };
     console.log(this.props);
     return (
-      <div className="ui devided list">
-        <h3>songlost</h3>
-        <p>yeeeah boooi</p>
+      <div className="ui devided list songlist">
+        <h3>songlist</h3>
         {this.renderList()}
       </div>
     );
@@ -32,4 +35,7 @@ const mapStateToProps = state => {
   return { songs: state.songs };
 };
 
-export default connect(mapStateToProps)(SongsList);
+// eslint-disable-next-line prettier/prettier
+export default connect(mapStateToProps,
+  { selectSong } // action
+)(SongsList); // component

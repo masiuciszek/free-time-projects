@@ -1,0 +1,22 @@
+.item{
+  height: 100%;;
+  display: flex;
+  flex-direction: column;
+
+  button{
+    // float: right;
+
+    // margin-left: 8rem;
+    pad: 1rem;
+    background: steelblue;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+}
+
+.songlist{
+  padding: 2rem;
+  h3{
+    font-size: 3rem;
+  }
+}

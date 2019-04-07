@@ -1,0 +1,17 @@
+@import './app';
+@import './details';
+@import './songlist';
+
+*{
+  margin:  0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+  body {
+    background: #666;
+    font-size: 1.2rem;
+    font-family: monospace;
+    color: #fff;
+    height: 100vh;
+  }
