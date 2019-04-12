@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Play');
+
+body{
+    background: #ccc;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Play', sans-serif;
+
+
+}
+
+.container{
+    width: 90%;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+.jump span:hover{
+    color: #fe3;
+    display: inline-block;
+    transform: transition;
+}
+
+.jump span:hover{
+    transform: translateX(-30px)rotate(-30deg)scale(2);
+}
+
+
+
+form{
+    
+}
+
+form #task,#filter{
+    padding: 12px 9px;
+    width: 50%;
+    border: none;
+    
+
+}
+
+
+form #task:focus,#filter:focus{
+    padding: 13px 10px;
+    border: 3px solid #001;
+    background: #fff;
+
+}
+
+form label, #second-label{
+    font-size: 2rem;
+    padding: 0 20px 0 20px;
+}
+form .btn{
+    border: none;
+    padding: 12px 9px;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.btn:hover{
+    background: #001;
+    color: #fff;
+    transition: all 1s;
+    transform: scale(1.2);
+}
+
+h5{
+    font-size: 1.7rem;
+}
+
+
+.clear-tasks{
+    border: 3px solid #001;
+    padding: 12px 10px;
+    margin-top: 15px;
+    display: block;
+    width: 30%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #001;
+}
+
+
+.clear-tasks:hover{
+    background: #fff;
+    color: #001;
+    transition: all 1s;
+    transform: scale(1.1);
+}
+
